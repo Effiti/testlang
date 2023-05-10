@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src=" https://cdn.jsdelivr.net/npm/ace-builds@1.19.0/src-min-noconflict/ace.min.js "></script>
+    <link
+      href=" https://cdn.jsdelivr.net/npm/ace-builds@1.19.0/css/ace.min.css "
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <style>
+    .wrapper {
+      display: grid;
+    }
+    .enterbutton {
+      width: fit-content;
+      margin: auto;
+      padding: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      cursor: pointer;
+      background-color: deepskyblue;
+      border-radius: 5px;
+      border: none;
+      font-size: xx-large;
+      color: ghostwhite;
+    }
+    .out {
+      display: flex;
+    }
+    .col {
+      width: 25%;
+      background-color: lightgray;
+      margin: 5px;
+    }
+    .hide {
+      display: none;
+    }
+  </style>
+  <body>
+    <input type="checkbox" name="stdlib" id="usestdlib">
+    <label for="stdlib">use stdlib</label>
+    <p class="hide stdlib">
+    </p>
+    <div class="wrapper">
+      <textarea id="input" rows="20" cols="100"></textarea>
+      <script src="main.js"></script>
+      <button
+        type="submit"
+        class="enterbutton"
+        id="button"
+        onclick="onButtonClick()"
+        onsubmit="onButtonClick()"
+      >
+        run
+      </button>
+      <div class="out">
+        <div class="col col1"></div>
+        <div class="col col2"></div>
+        <div class="col col3"></div>
+        <div class="col col4"></div>
+      </div>
+    </div>
+  </body>
+</html>
