@@ -44,6 +44,19 @@
     <input type="checkbox" name="stdlib" id="usestdlib">
     <label for="stdlib">use stdlib</label>
     <p class="hide stdlib">
+    (print "using stdlib")
+    def for fn i {
+      (call fn i)
+      (if (equ i 0) (ret))
+      (for fn (sub i 1))
+    }
+    def len list {
+      (ret (get list "length"))
+    }
+    def push ls els {
+      (ret (callOn ls (get ls "concat") els))
+    }
+
     </p>
     <div class="wrapper">
       <textarea id="input" rows="20" cols="100"></textarea>

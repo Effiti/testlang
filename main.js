@@ -38,6 +38,7 @@ var fnTable = {
       return args[0](...args.slice(1));
   },
   js : (str) => eval(str),
+  callOn: (obj, fun, ...args) => fun.call(obj, ...args)
 };
 
 function onButtonClick() {
